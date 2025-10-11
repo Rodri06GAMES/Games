@@ -68,10 +68,6 @@
       background: #e74c3c;
     }
 
-    .exit-fullscreen-btn:hover {
-      background: #c0392b;
-    }
-
     footer {
       margin-top: 40px;
       padding: 20px;
@@ -106,7 +102,6 @@
         <iframe id="iframeJeu" src="${url}" title="Jeu"></iframe>
         <br>
         <button class="btn fullscreen-btn" onclick="pleinEcran()">⛶ Plein écran</button>
-        <button class="btn exit-fullscreen-btn" onclick="quitterPleinEcran()">🔙 Quitter le plein écran</button>
       `;
     }
 
@@ -120,18 +115,6 @@
         iframe.webkitRequestFullscreen();
       } else if (iframe.msRequestFullscreen) {
         iframe.msRequestFullscreen();
-      }
-    }
-
-    function quitterPleinEcran() {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      } else if (document.msExitFullscreen) {
-        document.msExitFullscreen();
       }
     }
   </script>
