@@ -100,7 +100,7 @@
   <script>
     function lancerJeu(url) {
       document.getElementById("zone-jeu").innerHTML = `
-        <iframe id="iframeJeu" src="${url}" title="Jeu"></iframe>
+        <iframe id="iframeJeu" src="${url}" title="Jeu" allow="autoplay; fullscreen" allowfullscreen></iframe>
         <br>
         <button class="btn fullscreen-btn" onclick="pleinEcran()">⛶ Plein écran</button>
       `;
